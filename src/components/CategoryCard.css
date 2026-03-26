@@ -1,0 +1,114 @@
+.category-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+  border-top: 4px solid var(--primary-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.category-total {
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.item-row, .add-item-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.item-input {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background-color: var(--bg-color);
+  transition: border-color 0.2s;
+}
+
+.item-input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.name-input {
+  flex: 2;
+}
+
+.amount-input {
+  flex: 1;
+  text-align: right;
+}
+
+.add-btn, .del-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.add-btn {
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+}
+
+.add-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.del-btn {
+  color: var(--text-muted);
+}
+
+.del-btn:hover {
+  color: var(--fixed-color);
+  background-color: #fee2e2;
+}
+
+@media (max-width: 767px) {
+  .add-btn, .del-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .item-input {
+    min-height: 44px;
+  }
+}
